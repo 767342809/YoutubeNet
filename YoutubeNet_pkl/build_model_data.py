@@ -26,7 +26,8 @@ with open('remap.pkl', 'rb') as f:
 
         if len(pos_list)<3:
             continue
-  
+
+        # todo: neg为什么是索引
         def gen_neg():
             neg = pos_list[0]
             while neg in pos_list:
