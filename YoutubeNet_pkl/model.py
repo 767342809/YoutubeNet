@@ -24,7 +24,7 @@ class Model(object):
     self.hist_i = tf.placeholder(tf.int32, [None, None]) # history click[B, T]
     self.sl = tf.placeholder(tf.int32, [None,]) # history len [B]
     self.last = tf.placeholder(tf.int32, [None, ])  # last click[B]
-    self.basic=tf.placeholder(tf.float32,[None,None])#user basic feature[B,basic_size]
+    self.basic = tf.placeholder(tf.float32,[None,None])#user basic feature[B,basic_size]
     self.sub_sample = tf.placeholder(tf.int32, [None, None])  # soft layer (pos_clict,neg_list)[B,sub_size]
     self.y = tf.placeholder(tf.float32, [None, None])  # label one hot[B]
     self.lr = tf.placeholder(tf.float64, [])
